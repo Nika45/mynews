@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\Profile;
+use App\Phistory;
+use Carbon\Carbon;
+
 
 class ProfileController extends Controller
 {
@@ -52,6 +55,12 @@ class ProfileController extends Controller
       unset($profile_form['_token']);
       
       $profile->fill($profile_form)->save();
+      
+      $phistory = new Phistory;
+      $phistory->profile_id = $profile->id;
+      $phistory->edited_at = Carbon::now();
+      $phistory->save();
+      
       return redirect('admin/profile');
   }
   

@@ -12,5 +12,10 @@ class Profile extends Model
       'gender' => 'required',
       'hobby' => 'required',
       'introduction' => 'required',
-    ); 
+    );
+    
+    public function phistories()
+    {
+      return $this->hasMany('App\Phistory');
+    }
 }
