@@ -18,7 +18,7 @@
                                     {{ str_limit($post->gender, 150) }}
                                 </div>
                                 <div class="hoby">
-                                    {{ str_limit($post->hoby, 150) }}
+                                    {{ str_limit($post->hobby, 150) }}
                                 </div>
                                 <div class="introduction mt-3">
                                     {{ str_limit($post->introduction, 1500) }}
