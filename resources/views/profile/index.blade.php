@@ -20,7 +20,7 @@
                                 <div class="hoby">
                                     {{ str_limit($post->hobby, 150) }}
                                 </div>
-                                <div class="introduction mt-3">
+                                <div class="introduction">
                                     {{ str_limit($post->introduction, 1500) }}
                                 </div>
                             </div>
